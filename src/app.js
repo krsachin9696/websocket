@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
             users[socket.id] = name;
             console.log(`${name} joined the chat`);
             io.emit('chat message', `${name} has joined the chat`);
-            io.emit('update users', Object.values(users)); // Update user list
+            io.emit('update users', Object.values(users)); 
         } else {
             socket.emit('request name'); 
         }
