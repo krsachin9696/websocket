@@ -29,7 +29,6 @@ io.on('connection', (socket) => {
 
     socket.on('chat message', (msg) => {
         const userName = users[socket.id] || 'Anonymous';
-        console.log(`${userName}: ${msg}`);
         io.emit('chat message', `${userName}: ${msg}`);
     });
 
@@ -38,7 +37,7 @@ io.on('connection', (socket) => {
         delete users[socket.id];
         console.log(`${userName} disconnected`);
         io.emit('chat message', `${userName} has left the chat`);
-        io.emit('update users', Object.values(users)); // Update user list
+        io.emit('update users', Object.values(users));
     });
 });
 
