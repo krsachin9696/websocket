@@ -1,29 +1,31 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Socket.IO Chat</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script src="/socket.io/socket.io.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="user-list">
-          <h3>Online Users</h3>
-          <ul id="users"></ul>
+      <div class="user-list">
+        <h3>Online Users</h3>
+        <ul id="users"></ul>
+      </div>
+      <div class="chat-box">
+        <div>
+          <ul id="messages"></ul>
         </div>
-        <div class="chat-box">
-          <div >
-              <ul id="messages"></ul>
-          </div>
-          <div class="controls">
-              <input id="message" type="text" autocomplete="off" placeholder="Type your message..."/>
-              <button id="sendMessage">Send</button>
-          </div>
+        <div class="controls">
+          <select id="userSelect">
+            <option value="">Select User</option>
+          </select>
+          <input id="message" type="text" placeholder="Type your message..." />
+          <button id="sendMessage">Send</button>
         </div>
+      </div>
     </div>
     <script src="/script.js"></script>
-</body>
+  </body>
 </html>
