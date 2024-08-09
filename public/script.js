@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
   const socket = io();
   let nameSet = false;
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userUl = document.getElementById('users');
     const userSelect = document.getElementById('userSelect');
     userUl.innerHTML = '';
-    userSelect.innerHTML = '<option value="">Select User</option>';
+    userSelect.innerHTML = '<option value="">Broadcast</option>';
 
     userList.forEach((user) => {
       const li = document.createElement('li');
@@ -77,4 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
       userSelect.appendChild(option);
     });
   });
-});
+// });
